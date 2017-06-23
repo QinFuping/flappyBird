@@ -170,7 +170,11 @@ window.onload=function(){
     gs.onclick=function(){
         _best.style.display='block';
         _gameStart.style.display='none';
-        document.getElementById('best-score').innerText=storage.score;
+        if(!storage.score){
+            document.getElementById('best-score').innerText=score;
+        }else {
+            document.getElementById('best-score').innerText = storage.score;
+        }
     }
     document.getElementById('best-btn').onclick=function(){
         _best.style.display='none';
