@@ -103,7 +103,7 @@ html,body{
     cursor: pointer;
     margin: 0 20px;
 }
-.game-in,.game,.score{
+.game-in,.game,.score,.pipe-wrap,.game-over,.best{
     display: none;
 }
 .game-in{
@@ -160,24 +160,17 @@ html,body{
         transform: translateX(-5%);
     }
 }
+.pipe-wrap{
+    overflow: hidden;
+}
+.pipes{
+    height: 100%;
+    position: relative;
+}
 .pipe{
     position: absolute;
     width: 62px;
     min-height: 60px;
-    right: -62px;
-}
-.pipeMove{
-    -webkit-animation: pipesMove 8s linear both;
-    -o-animation: pipesMove 8s linear both;
-    animation: pipesMove 8s linear both;
-}
-@-webkit-keyframes pipesMove {
-    from{
-        right: -62px;
-    }
-    to{
-        right: 100%;
-    }
 }
 .pipe>div{
     position: absolute;
@@ -200,4 +193,54 @@ html,body{
 .pipe2>div{
     top: 0;
     background-image: url("../image/down_pipe.png");
+}
+.score{
+    text-align: center;
+    padding-top: 10%;
+}
+.score>img{
+    display: none;
+}
+.game-over{
+    text-align: center;
+}
+.game-over-t{
+    margin-top: 100px;
+}
+.message-wrap{
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+}
+.s-cur,.s-best{
+    position: absolute;
+    right: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.s-cur{
+    top: 36px;
+}
+.s-best{
+    top: 86px;
+}
+.game-over-btn{
+    display: block;
+    margin: 30px auto 0;
+    cursor: pointer;
+}
+.best{
+    text-align: center;
+    font-weight: bold;
+}
+.best-title{
+    font-size: 30px;
+    margin-top: 100px;
+}
+.best-score{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.best-btn{
+    margin-top: 60px;
 }
