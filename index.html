@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div class="main">
+    <div class="main" id="main">
         <img src="image/bg.jpg" class="bg">
         <!--Start interface-->
         <div class="game-start" id="game-start">
@@ -26,15 +26,34 @@
         <div class="game-in" id="game-in">
             <img src="image/tutorial.png">
         </div>
-        <!--line-->
+        <!--Line-->
         <span class="line-wrap" id="line-wrap"><span class="line"></span></span>
+        <!--Pipes-->
+        <div class="pipe-wrap" id="pipe-wrap"><div class="pipes" id="pipes"></div></div>
+        <!--Record-->
+        <div class="score" id="score">
+            <img id="score1" src="image/0.jpg">
+            <img id="score2" src="image/0.jpg">
+        </div>
         <!--Game interface-->
         <div class="game" id="game">
             <div class="bird" id="bird"></div>
         </div>
+        <!--Game over interface-->
+        <div class="game-over" id="game-over">
+            <img class="game-over-t" src="image/game_over.jpg">
+            <div class="message-wrap">
+                <img class="message" id="message" src="image/message.jpg">
+                <p class="s-cur" id="s-cur">0</p>
+                <p class="s-best" id="s-best">0</p>
+            </div>
+            <img class="game-over-btn" id="game-over-btn" src="image/ok.jpg">
+        </div>
         <!--Score interface-->
-        <div class="score" id="score">
-
+        <div class="best" id="best">
+            <p class="best-title">Best Score</p>
+            <p class="best-score" id="best-score">0</p>
+            <img class="best-btn" id="best-btn" src="image/ok.jpg">
         </div>
     </div>
     <script src="js/index.js"></script>
