@@ -158,6 +158,9 @@ window.onload=function(){
     }
     //record
     function record(){
+        if(!storage.score){
+            storage.score=0;
+        }
         storage.score=score>storage.score?score:storage.score;
         document.getElementById('s-best').innerText=storage.score;
         console.log(storage.score);
