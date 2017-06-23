@@ -122,7 +122,6 @@ window.onload=function(){
                     score1.src='image/'+Math.floor(score/10)+'.jpg';
                     score2.src='image/'+parseInt(score%10)+'.jpg';
                 }
-                console.log(document.getElementsByClassName('pipe1')[1]);
             }
             //impact checking
             if(_pipeWrap.scrollLeft>(0.8*sw+sss*score+67) && _pipeWrap.scrollLeft<(0.8*sw+sss*score+pw+67)){
